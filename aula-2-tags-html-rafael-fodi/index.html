@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página exemplo estruturada apenas com HTML semântico." />
+    <title>Estrutura Básica em HTML</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Projeto Estrutura HTML</h1>
+        <p>Exemplo prático de organização semântica utilizando apenas HTML.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#conteudo">Conteúdo</a></li>
+            <li><a href="#midia">Mídia</a></li>
+            <li><a href="#tabela">Tabela</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Esta página foi desenvolvida como exercício prático para consolidar conceitos de <strong>estrutura semântica em HTML</strong>.</p>
+            <p>O foco está na organização correta dos elementos e no uso adequado de marcações como <em>títulos hierárquicos e seções bem definidas</em>.</p>
+        </section>
+
+        <section id="conteudo">
+            <h2>Conteúdo</h2>
+            <ul>
+                <li>Uso correto de tags semânticas</li>
+                <li>Hierarquia de títulos</li>
+                <li>Navegação com âncoras internas</li>
+                <li>Formulários acessíveis</li>
+            </ul>
+        </section>
+
+        <section id="midia">
+            <h2>Mídia</h2>
+            <figure>
+                <img src="https://via.placeholder.com/300x200"
+                     alt="Imagem ilustrativa representando estrutura de código HTML em um monitor"
+                     width="300"
+                     height="200">
+                <figcaption>Representação visual de um código HTML estruturado.</figcaption>
+            </figure>
+        </section>
+
+        <section id="tabela">
+            <h2>Tabela</h2>
+            <table border="1">
+                <tr>
+                    <th>Item</th>
+                    <th>Descrição</th>
+                    <th>Prioridade</th>
+                </tr>
+                <tr>
+                    <td>Navegação</td>
+                    <td>Links para seções</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>Imagem</td>
+                    <td>Com texto alternativo</td>
+                    <td>Média</td>
+                </tr>
+                <tr>
+                    <td>Formulário</td>
+                    <td>Campos obrigatórios</td>
+                    <td>Alta</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form action="#" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto">
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="erro">Erro</option>
+                </select>
+
+                <br><br>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="40"></textarea>
+
+                <br><br>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto acadêmico — Consolidação de conhecimentos em HTML.</p>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+            Referência: MDN Web Docs
+        </a>
+    </footer>
+
+</body>
+
+</html>
