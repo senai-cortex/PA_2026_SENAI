@@ -1,114 +1,86 @@
-<!DOCTYPE html><!--prepara o navegador para processar HTML-->
+<!DOCTYPE html>
 <html lang="pt-br">
-<head> <!--passagem de metadados-->
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>workshop CSS Básico</title>
-    <style>
-        * {
-            box-sizing: border-box;
-
-        }
-        body {
-            margin: 0;
-            color:aliceblue;
-           background-color: purple;
-           font-family: system-ui, Arial,sans-serif;
-           line-height: 1.5;
-        }
-
-        .container {
-            width: 900px;
-            margin: 0 auto;
-            padding: 10px;
-        }
-
-        .box {
-            background: rgba(0,0,0,0.75);
-            border: 1px solid rgba(240,240,255,0.350);
-            border-radius: 12px;
-            padding: 14px;
-            margin-bottom: 12px;
-        }
-
-        h1,h2{
-            color: rgb(255, 221,0);
-            margin: 0 0 8px;
-        }
-
-        .subtitulo {
-            margin: 0;
-            color: #d1d5db;
-        }
-
-        p {
-            color: whitesmoke;
-        }
-
-        #apresentacao {
-            border-left: 8px solid rgb(255, 221,0);
-        }
-
-    .nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 10px;
-        flex-wrap: nowrap;
-        }
-    </style>
+    <title>Site do Batman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="topo">
-    <div class="container" id="pagina">
-        <header class="box" id="cabecalho">
-            <div class="header-interno">
-        
+<body>
+    <div class="loading-overlay" id="loading">
+        <img class="loading-bat" src="assets/transferir.png" alt="Loading">
+    </div>
 
+    <div class="background-effects">
+        <div class="bat-signal"></div>
+        <div class="bat-signal-2"></div>
+    </div>
 
-    <h1 class="titulo">Site do Batman</h1>
-    <p class="subtitulo">
-        Gotham City: <strong>Vigilância</strong>, <em>Estratégia</em> e Tecnologia.
-    </p>
- 
-    </header>
-    <nav class="box" id="menu">
-        <ul class="nav">
-            <li><a class="nav-link" href="#apresentacao">Quem é?</a></li>
-            <li><a class="nav-link" href="#galeria">Galeria</a></li>
-            <li><a class="nav-link" href="#rodape">Rodapé</a></li>
-                </ul>
-            </nav>
-            <main id="conteudo">
-                <section class="box" id="apresentacao">
-                    <h2>Quem é o Batman?</h2>
-                    <p>
-                        Batman (Bruce Wayne) é um personagem da DC comics e atua como justiceiro de gotham.
-                        Ele não tem superpoderes: sua força esta em <strong>treinamento</strong>, <em>tecnologia</em> e riqueza.
-                    </p>
-                    <p>
-                        Em várias histórias, Gotham representa problemas sociais: desigualdade, corrupção e violência urbana. <br>
-                        Alguns quadrinhos usam o Batman como forma de <strong>critica social</strong>, mostrando como falhas nas intituições, interesses econômicos e 
-                        autoritarismo afetam principalmente quem tem direitos e oportunidades.
-                    </p>
-                </section>
-                <section class="box" id="galeria">
-                    <h2>Galeria</h2>
-                    <div class="galery" id="galeria-imagens">
-                        <img src="https://i.redd.it/rswt5cbrxqda1.jpg" width="220" heigth="120" alt="batman que ri">
-                        <img src="https://i.redd.it/this-scene-just-screamed-aura-he-looks-so-good-v0-stu3spflcrid1.png?width=1920&format=png&auto=webp&s=32b959e79d389aa0b457c818f6287425661b4f80"  width="220" heigth="120" alt="batman aura">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3WgkPGNZPDcKV0a9f5QJjiygxVFM3tUSgZw&s" width="220" heigth="120" alt="batman x coringa">
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img id="modalImage" src="" alt="Imagem ampliada">
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img class="bat-logo" src="assets/transferir.png" alt="Logo Batman">
+            </div>
+            <h1>Site do Batman</h1>
+            <p class="subtitle">
+                Gotham City: <strong>Vigilância</strong>, <em>Estratégia</em> e Tecnologia.
+            </p>
+        </header>
+
+        <nav>
+            <div class="nav-menu">
+                <a href="#apresentacao">Quem é?</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#rodape">Rodapé</a>
+            </div>
+        </nav>
+
+        <main class="content-wrapper">
+            <section id="apresentacao">
+                <h2>Quem é o Batman?</h2>
+                <p>
+                    Batman (Bruce Wayne) é um personagem da DC comics e atua como justiceiro de gotham.
+                    Ele não tem superpoderes: sua força esta em <strong>treinamento</strong>, <em>tecnologia</em> e riqueza.
+                </p>
+                <div class="divider"></div>
+                <p>
+                    Em várias histórias, Gotham representa problemas sociais: desigualdade, corrupção e violência urbana.
+                    Alguns quadrinhos usam o Batman como forma de <strong>critica social</strong>, mostrando como falhas nas intituições, interesses econômicos e 
+                    autoritarismo afetam principalmente quem tem direitos e oportunidades.
+                </p>
+            </section>
+
+            <section id="galeria">
+                <h2>Galeria</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.redd.it/rswt5cbrxqda1.jpg" alt="Batman que ri">
                     </div>
-                </section>
-            </main>
-            <footer class="box" id="rodape">
-                <p>
-                    <a class="link" href="#topo">Topo</a>
-                </p>
-                <p>
-                    Exemplo de WebSite para treino de HTML e CSS.
-                </p>
-            </footer>
-        </div>
-    </body>
+                    <div class="gallery-item">
+                        <img src="https://i.redd.it/this-scene-just-screamed-aura-he-looks-so-good-v0-stu3spflcrid1.png?width=1920&format=png&auto=webp&s=32b959e79d389aa0b457c818f6287425661b4f80" alt="Batman aura">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3WgkPGNZPDcKV0a9f5QJjiygxVFM3tUSgZw&s" alt="Batman x Coringa">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="rodape">
+            <a href="#topo" class="back-to-top">Topo</a>
+            <div class="divider"></div>
+            <p class="content-wrapper"> Exercício de html css realizado por Rafael Pellegrini </p>
+            <div class="divider"></div>
+         
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
