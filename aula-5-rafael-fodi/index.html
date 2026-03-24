@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Formulário</h1>
+        <form id="form-inspecao">
+            
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome"> <p id="mensagemNome"></p>
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email"> <p id="mensagemEmail"></p>
+
+            <label for="setor">Setor</label>
+            <select id="setor" name="setor">
+                <option value="">Selecione...</option> 
+                <option value="operacao">Operação</option>
+                <option value="manutencao">Manutenção</option>
+                <option value="seguranca">Seguraça</option>
+            </select>
+            <p>Prioridade</p>
+            <label><input type="radio" name="prioridade"   value="baixa">Baixa</label>
+            <label><input type="radio" name="prioridade"   value="media">Media</label>
+            <label><input type="radio" name="prioridade"   value="alta">Alta</label>
+             <p id="mensagemPrioridade"></p>
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao"></textarea>
+
+            <label>
+                Estou ciente dos termos de uso <input type="checkbox" id="termos" name="termos">
+
+            </label>
+            <button type="submit">Enviar</button>
+            <p id="mensagem"></p>
+        </form>
+    </main>
+    <script>
+        const form = document.getElementById
+        ('form-inspecao');
+        const mensagem = document.getElementById
+        ('mensagem');
+         const mensagemNome = document.getElementById
+        ('mensagemNome');
+         const mensagemEmail = document.getElementById
+        ('mensagemEmail');
+         const mensagemPrioridade = document.getElementById
+        ('mensagemPrioridade');
+        form.addEventListener('submit', function (event){
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const setor = document.getElementById('setor').value;
+            const descricao = document.getElementById('descricao').value.trim();
+            const termos = document.getElementById('termos').checked;
+            const prioridade = document.querySelector
+            ('input[name="prioridade"]:checked');
+            if (nome === ''){
+                mensagemNome.textContent = "Preencha o nome.";
+                return;
+                
+            }
+            if (email === ''){
+                mensagemEmail.textContent = "Preencha com o email.";
+                return;
+            }
+            if (setor === ''){
+                mensagemPrioridade.textContent = "Selecione a prioridade.";
+                return;
+            }
+            if (!prioridade){
+                mensagemPrioridade.textContent = "Selecione a prioridade.";
+                return;
+            }
+            if (!termos){
+                mensagemPrioridade.textContent = "Marque os termos de uso.";
+                return;
+            }
+
+            mensagem.textContent = 'Forumlario validado'
+    })
+    </script>
+</body>
+</html>
