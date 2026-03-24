@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('section').forEach(function(section) {
         observer.observe(section);
     });
-
     const galleryItems = document.querySelectorAll('.gallery-item');
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
