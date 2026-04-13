@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login — Workshop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="card">
+
+        <!-- TELA: LOGADO -->
+        <div id="area-logado">
+            <p class="bem-vindo" id="texto-bem-vindo">Ola!</p>
+            <p class="info-sessao">Voce esta autenticado.</p>
+            <button class="secundario" onclick="sair()">Sair</button>
+        </div>
+
+        <!-- TELA: LOGIN / CADASTRO -->
+        <div id="area-login">
+            <h1>Acesse sua conta</h1>
+            <p class="subtitulo">Sistema de login com localStorage</p>
+
+            <div class="campo">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" placeholder="seu_usuario" />
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="••••••••" />
+            </div>
+
+            <button onclick="entrar()">Entrar</button>
+            <button class="secundario" onclick="cadastrar()">Criar conta</button>
+
+            <div class="mensagem" id="mensagem"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.card h1 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: #f1f5f9;
+}
+
+.card p.subtitulo {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 28px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+input {
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #f1f5f9;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+button {
+    width: 100%;
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #4f46e5;
+}
+
+button.secundario {
+    background: #334155;
+}
+
+button.secundario:hover {
+    background: #475569;
+}
+
+.mensagem {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 14px;
+    display: none;
+}
+
+.mensagem.erro {
+    background: #450a0a;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+}
+
+.mensagem.ok {
+    background: #052e16;
+    color: #86efac;
+    border: 1px solid #14532d;
+}
+
+#area-logado {
+    display: none;
+}
+
+#area-login {
+    display: block;
+}
+
+.bem-vindo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a5b4fc;
+    margin-bottom: 8px;
+}
+
+.info-sessao {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
